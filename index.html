@@ -27,7 +27,7 @@
       <div class="center"></div>
     </ons-toolbar>
 
-    <p id="latlng">This is the second page.</p>This is the second page.</p>
+    <p id="latlng">This is the second page.</p>
   </ons-page>
 </template>
    <script>
@@ -42,6 +42,7 @@
     };
   } else if (page.id === 'page2') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
 });
    </script>
